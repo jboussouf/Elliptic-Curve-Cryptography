@@ -107,6 +107,30 @@ generate = str([[n1, n2]])[1: -1]
 ```
 
 ## ECDH in python
-.....
+Elliptic-curve Diffie–Hellman (ECDH) is one of the most used cryptosystems for key exchange and used by "IMessage, Whatsapp, SSL, HTTPS", and in this section you can check the file ECDH.ipynb to see the full code of this algorithm.
+
+The first thing we have to do is to check if cypari2 is already installed in the system, if not we have to install it.
+### System part
+In this part we use an object of the ECDHSys class and then we output the system parameters.
+```python
+  ecdhSyd = ECDHSys(a, b, p)
+```
+if we enter a=0, b=7 and p=43, the output will be :
+
+    {'a': 0, 'b': 7, 'p': 43, 'ordre': 31, 'generator': '[32, 3]'}
+
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWERMOjkpbkV2Uf0ayPcvJzL14LFgS2bXfyB0T6-KzsQfTqFNQsCsFp8J4JygV1NTwDzqMDSg2SC16s3YBKHM0lG5VntIU4UQ8awzuK18eLDRZIs8-mloVQtp2hLV5TSdOKvTDXFMYt51zKGwmTToN7YzXNS9jLyLM5WO_kX3gtl3E83XD8dFrbhGgg/s297/ECDHSystem.png)
+### User part
+In this part we will use an object of the ECDHUser class, then we will use it to generate a random private key; then we will double the chosen generator by the system class.
+
+```python
+ecdhUser = ECDHUser(sysKey)
+```
+
+Thus, between each user, we generate an encrypted key between them (in this example, the encrypted key is [2, 12]). We can now use this key for key exchange.
+
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2oIh9Az0J0jh6uonZ2Z8IZl-WOHebUX3YLFZXYByyEBjV1Y5wLnV48TlM7vQQmI0v9CpiBDNNlTfxhrOozWEPAFRjwgTowrtXnB7_Kc7ycjXguXLaBGzwgmjS75zk0JuHTCre9g_H0OhEMeus_BE3blEk1qUEdat8TKZmVb-mZUq45R7b_u6DqWS1nA/s741/ECDHUser.png)
+
 ## ECDSA in python
+
 ....
