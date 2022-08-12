@@ -3,7 +3,7 @@
 
 In this work, we represent how to use PARI/GP for elliptic curves with python and apply it to the use of ECDH and ECDSA.
 
-
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6nzj-tSLlIfcup9vu7JQoRtqT5_1vkyeGsra49TT2MKTVKWelhStiNzhAXdDjrDHrIESRD-OAA6oawFcwYRHOH7R8v4iKMhLkyFWlzjUI_li19mHrbIXI9HxtQ2iZvd5gCccdGoS2KxUhs_Qs5wSz_AQfay7NmCTB_H0CSQ5oSMQ8a55ln_J3r5eYaw/s1545/ECCforGithub.png)
 ## Content
 - Introduction
 - Setup
@@ -160,3 +160,6 @@ To generate a key pair, the user uses an ECDSAUser object and takes as argument 
 ![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJfsD2rpaP41-KVy1XeY0lqalPArr9SD8_1uyjYC4In1_3sFuJUThliZczr2IsMeMcg8AUAKaEK5F0dna6YMbpAsiudPpiBpIlONb0Hnw_pB59X1YqHL_V_QbqcpGOi0oPL6qTeLr5ZfM_2AsI4LWCGixOTFYoz29GBvXp7CTLDlsQHvo80YWn2QDqFg/s1600/ECDSAUser122.png)
 
 ## Conclusion
+
+Elliptic curves are one of the most used encryption systems in the world of digital signature and key exchange, by many algorithms such as ECDH and ECDSA, but for digital signature, there is a problem to find a curve with a modulo number in the modulo section has a prime order, and it makes a big problem for us to use a recommended curve like secp256k1 that we use in the bitcoin digital signature, or use on a curve, but we have to try until we find a great curve with a prime order.
+Like the work of a foundryman, we are trying to find a method to know if a curve is a light to use for the digital signature.
