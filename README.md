@@ -11,6 +11,7 @@ In this work, we represent how to use PARI/GP for elliptic curves with python an
   - Using an elliptic curve with PARI/GP
 - ECDH in python
 - ECDSA in python
+- Conclusion
 ## Introduction
 
 .........
@@ -133,4 +134,25 @@ Thus, between each user, we generate an encrypted key between them (in this exam
 
 ## ECDSA in python
 
-....
+ECDSA is a digital signature bayser by the elluptic curve cryptographic system and one of the most popular digital signatures used by many blockchains like bitcoin, ethirum, dodgecoin, etc.
+And for our project ECDSA is represented in the file ECDSA.ipynb.
+
+First of all, for our project, we will use ECDSASys to create an object named ecdsaSys. This object will create the important parameters to use it to generate keys for the digital signature.
+
+```python
+  ecdsaSys = ECDSASys(0, 13)
+```
+
+(There is a section in the code where we loop over part of the code and generate a random prime number until the order of the curve is a prime number because we are looking to do PGCD(prime, order, outer number) = 1, and the only way to get that is to do PGCD(prime, order) = 1.)
+
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFvxiH6fW321v6FP5_iNB5IKGvmpo4xe9c8Ix_hJcqAUCyY7eQSYLI8svJ8rrRBgf7noAGB8WYlya_X_j3h-fQ8Sdu6wzVIFXD_AqdIcW4_WNP81iMRYLkdePSeOC3fNsjV2rh55Q3JFe8IQghVO5WAqxoX5rYpfthDVYwQRUy8Yp7Nh4iDgl8mxrQcw/s1600/Diagramme%20sans%20nom-Page-2.drawio.png)
+
+Thus, for the time being, any user of the system is able to generate a key pair to sign and verify the signature of the other.
+To generate a key pair, the user uses an ECDSAUser object and takes as argument the parameters of the system, to generate a private key "d" and a public key "A" formed as a point, then the user signs a piece of information (hash of the transaction in the case of a transaction), then sends the information to the other users with the clear information to verify the signature.
+
+```python
+  ecdsaUser = ECDSAUser(parameters)
+```
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJfsD2rpaP41-KVy1XeY0lqalPArr9SD8_1uyjYC4In1_3sFuJUThliZczr2IsMeMcg8AUAKaEK5F0dna6YMbpAsiudPpiBpIlONb0Hnw_pB59X1YqHL_V_QbqcpGOi0oPL6qTeLr5ZfM_2AsI4LWCGixOTFYoz29GBvXp7CTLDlsQHvo80YWn2QDqFg/s1600/ECDSAUser122.png)
+
+## Conclusion
