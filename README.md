@@ -14,7 +14,11 @@ In this work, we represent how to use PARI/GP for elliptic curves with python an
 - Conclusion
 ## Introduction
 
-.........
+In terms of security, cryptography is just a cover between the attacker and the network users. The right choice of cryptosystem is therefore a difficult mission and one of the good cryptosystems used is the elliptic curve.
+
+![Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmY6f4FJCtk1EKPmm3QpqOTTX_fJab5uxsUMCPnDhY3rmeEsk9kE2SKTlMZnKR4PVgQ6sEaBIc9uBOdEluwUuEOJ1DIlKjJ46jWdMhqtdaZquTIeK5RiNKIIjLdNRYf8eCjjvlQZ0tD5NsuBsPuPMPtq3BzSCbd0Sm_apMXwEb37gPQ2ZYx9TEg2Uf1Q/s496/download.png)
+
+Thus, as we can see, we get the same level of security for small key lengths, since for level 80 we only need 160 bits while 1024 bits are needed for the RSA encryption system. For elliptic curves, there is not only one algorithm, but we use each algorithm for a given task, like for key exchange we have to use ECDH and for digital signature we use ECDSA or EdDSA.
 
 ## Setup
 
