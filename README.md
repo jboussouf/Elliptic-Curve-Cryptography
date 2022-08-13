@@ -163,3 +163,7 @@ To generate a key pair, the user uses an ECDSAUser object and takes as argument 
 
 Elliptic curves are one of the most used encryption systems in the world of digital signature and key exchange, by many algorithms such as ECDH and ECDSA, but for digital signature, there is a problem to find a curve with a modulo number in the modulo section has a prime order, and it makes a big problem for us to use a recommended curve like secp256k1 that we use in the bitcoin digital signature, or use on a curve, but we have to try until we find a great curve with a prime order.
 Like the work of a foundryman, we are trying to find a method to know if a curve is a light to use for the digital signature.
+## Authors
+
+- [@jamalboussouf](https://github.com/jamal-boussouf)
+    - [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jamal-boussouf-996a05205/)
